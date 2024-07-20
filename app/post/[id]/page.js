@@ -11,7 +11,7 @@ const SinglePostPage = async ({ params }) => {
  
   return (
     <>
-      <ul className="p-8 lg:p-24">
+      <ul className="">
         <li key={data.postId}>
           <div className="card card-side bg-base-100 shadow-xl max-w-5xl ">
             <div className="card-body">
