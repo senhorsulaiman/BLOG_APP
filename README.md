@@ -38,3 +38,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## github Link
 https://github.com/senhorsulaiman/BLOG_APP/tree/main/app
+
+
+## meterial ui page link
+
+##url 
+/post
