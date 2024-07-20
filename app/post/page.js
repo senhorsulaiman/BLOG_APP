@@ -1,8 +1,13 @@
 import React from 'react'
-import Postmeterial from '../components/Post'
+import PostMeterial from '../components/PostMeterial'
 const pages = () => {
   return (
-    <Postmeterial/>
+    <>
+     
+
+<PostMeterial/>
+      </>
+      
   )
 }
 

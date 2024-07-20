@@ -10,7 +10,7 @@ const NavBar = () => {
         </div>
         <div className="flex-none">
             <ul className="menu menu-horizontal px-1">
-            <li><Link href={`/`}>Post</Link></li>
+            <li><Link href={`/post`} className='btn btn-secondary '>Post Page Material Ui Example</Link></li>
             
             </ul>
         </div>

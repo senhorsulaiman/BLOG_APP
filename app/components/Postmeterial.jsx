@@ -1,45 +1,63 @@
 
 import axios from 'axios';
 import Link from 'next/link';
-import React from 'react'
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Unstable_Grid2';
+import Paper from '@mui/material/Paper';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 const url = `https://jsonplaceholder.typicode.com/posts`;
 
+const PostMeterial = async () => {
 
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
-const Post = async () => {
   const { data } = await axios(`${url}`);
 
 
   return (
     <div>
-   
-      <ul className='grid xl:grid-cols-4 gap-4 lg:grid-cols-3 md:grid-cols-2  auto-rows-fr' >
-        {data.map((post) => {
+     
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid  container spacing={2} columns={24}>
 
-          return (
-            <li key={post.id} className='mb-6 '>
+          {data.map((post) => {
 
-              <div className="card card-side bg-base-100 shadow-xl h-[100%]">
+            return (
+              <Grid xs={6} key={post.id}>
 
-                <div className="card-body">
-                  <h2 className="card-title">{post.title}</h2>
+                <Card >
 
-                  <p>{post.body}</p>
-                  <div className="card-actions justify-end">
-                    <Link className="btn btn-primary" href={`/post/${post.id}`}> Read More</Link>
-                  </div>
-                </div>
-              </div>
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {post.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {post.body}
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
 
-            </li>
+                    <Button size="small">  <Link className="btn btn-primary" href={`/post/${post.id}`}> Read More</Link></Button>
+                  </CardActions>
+                </Card>
 
-          )
-        })}
 
-      </ul>
+              </Grid>
+            )
+          })}
+
+
+        </Grid>
+      </Box>
+
 
     </div>
   )
 }
 
-export default Post
+export default PostMeterial
