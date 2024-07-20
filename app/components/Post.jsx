@@ -13,7 +13,7 @@ const Post = async () => {
   return (
     <div>
 
-      <ul className='grid lg:grid-cols-4 gap-4 md:grid-cols-2 auto-rows-auto'>
+      <ul className='grid lg:grid-cols-4 gap-4 md:grid-cols-2 auto-rows-fr' >
         {data.map((post) => {
 
           return (
