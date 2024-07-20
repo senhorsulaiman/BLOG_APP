@@ -3,7 +3,7 @@ import axios from "axios";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import Link from "next/link";
 import { FaUserLarge } from "react-icons/fa6";
-import PostComments from "../../components/PostComments";
+
 const SinglePostPage = async ({ params }) => {
   const url = `https://jsonplaceholder.typicode.com/comments/${params.id}`;
   const { data } = await axios(`${url}`);
@@ -14,7 +14,7 @@ const SinglePostPage = async ({ params }) => {
     <>
       <ul className="p-8 lg:p-24">
         <li key={data.postId}>
-          <div className="card card-side bg-base-100 shadow-xl">
+          <div className="card card-side bg-base-100 shadow-xl max-w-5xl ">
             <div className="card-body">
               <h2 className="card-title"><FaUserLarge  className="w-4 h-4 text-gray-950"/>{data.id}</h2>
               <p className="flex items-center ">
@@ -24,7 +24,7 @@ const SinglePostPage = async ({ params }) => {
             
                 <div className="card-actions  ">
                     <Link className="btn btn-primary btn-md mt-4"  href={`/`}>
-                    {" "}
+                   
                     Go Back
                     </Link>
                 </div>
