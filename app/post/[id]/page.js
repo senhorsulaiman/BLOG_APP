@@ -8,8 +8,7 @@ const SinglePostPage = async ({ params }) => {
   const url = `https://jsonplaceholder.typicode.com/comments/${params.id}`;
   const { data } = await axios(`${url}`);
 
-  console.log(data);
-
+ 
   return (
     <>
       <ul className="p-8 lg:p-24">

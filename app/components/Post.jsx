@@ -9,7 +9,6 @@ const Post = async () => {
   const { data } = await axios(`${url}`);
 
 
-  // console.log(data)
   return (
     <div>
 
