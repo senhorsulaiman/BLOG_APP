@@ -16,19 +16,19 @@ const SinglePostPage = async ({ params }) => {
         <li key={data.postId}>
           <div className="card card-side bg-base-100 shadow-xl">
             <div className="card-body">
-              <h2 className="card-title"><FaUserLarge  className="w-5 h-5 text-gray-950"/>{data.id}</h2>
+              <h2 className="card-title"><FaUserLarge  className="w-4 h-4 text-gray-950"/>{data.id}</h2>
               <p className="flex items-center ">
-                <MdOutlineMarkEmailUnread className="mr-2 w-5 h-5 text-gray-950" /> {data.email}
+                <MdOutlineMarkEmailUnread className="mr-2 w-4 h-4 text-gray-950" /> {data.email}
               </p>
-              <p>{data.body}</p>
-              <div className="card-actions justify-end">
-                <div className="card-actions ">
-                  <Link className="btn btn-primary" href={`/`}>
+              <p className="leading-loose">{data.body}</p>
+            
+                <div className="card-actions  ">
+                    <Link className="btn btn-primary btn-md mt-4"  href={`/`}>
                     {" "}
                     Go Back
-                  </Link>
+                    </Link>
                 </div>
-              </div>
+             
             </div>
           </div>
         </li>

@@ -13,11 +13,11 @@ const Post = async () => {
   return (
     <div>
 
-      <ul className='grid lg:grid-cols-4 gap-4 md:grid-cols-2'>
+      <ul className='grid lg:grid-cols-4 gap-4 md:grid-cols-2 auto-rows-auto-1fr'>
         {data.map((post) => {
 
           return (
-            <li key={post.id} className='mb-6'>
+            <li key={post.id} className='mb-6 '>
 
               <div className="card card-side bg-base-100 shadow-xl">
 
